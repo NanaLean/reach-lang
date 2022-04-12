@@ -1,11 +1,11 @@
 'reach 0.1';
 
 export const main = Reach.App(() => {
-  const Creator = Participant('Creator', {
-    // Specify the Creator's interact interface here
+  const Alice = Participant('Alice', {
+    // Specify the Alice's interact interface here
   });
-  const Owner   = ParticipantClass('Owner', {
-    // Specify the Owner's interact interface here
+  const Bob   = Participant('Bob', {
+    // Specify the Bob's interact interface here
   });
 
   init();
