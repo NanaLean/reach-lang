@@ -11,9 +11,16 @@ const ctcBob = accBob.contract(backend, ctcAlice.getInfo());
 
 await Promise.all([
   ctcAlice.p.Creator({
-    // implement Alice's interact object as the creator here
+    getId: () => {
+      const nft = stdlib.randomUInt();
+      console.log(`Alice mints the NFT #${nft}.`);
+      return nft; 
+    }
   }),
   ctcAlice.p.Owner({
-    // implement Alices's interact object as the owner here
+    newOwner: () => {
+      console.log(`Alice trades to Bob.`);
+      return accBob;
+    }
   }),
 ]);

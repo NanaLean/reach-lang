@@ -1,13 +1,13 @@
 'reach 0.1';
+'use strict';
 
 export const main = Reach.App(() => {
-  const Alice = Participant('Alice', {
-    // Specify the Alice's interact interface here
+  const Creator = Participant('Creator', {
+    // Specify the Creator's interact interface here
   });
-  const Bob   = Participant('Bob', {
-    // Specify the Bob's interact interface here
+  const Owner   = Participant('Owner', {
+    // Specify the Owner's interact interface here
   });
-
   init();
   // write your program here
 
